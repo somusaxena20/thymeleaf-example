@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Condition Practice</title>
+</head>
+<body>
+    <h1 th:if="${g} == 'm'">Male</h1>
+    <h1 th:unless="${g} == 'm'">Female</h1>
+
+    <div th:switch="${#lists.size(name)}">
+
+        <h1 th:case="1">This is One</h1>
+        <h1 th:case="2">This is Two</h1>
+        <h1 th:case="3">This is Three</h1>
+        <h1 th:case="4">This is Four</h1>
+        <h1 th:case="*">This is zero</h1>
+    </div>
+
+    <footer th:replace="footer::footer1">
+
+    </footer>
+</body>
+</html>

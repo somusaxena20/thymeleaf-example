@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer Template</title>
+</head>
+<body>
+    <footer th:fragment="footer1(${nam}, ${branch}, ${location})">
+        <div class="container">
+            <span>
+                <h4><span th:text="${name}"></span></h4>
+                <h4><span th:text="${branch}"></span></h4>
+                <h4><span th:text="${location}"></span></h4>
+            </span>
+        </div>
+    </footer>
+
+    <div th:replace="${content}"> </div>
+</body>
+</html>

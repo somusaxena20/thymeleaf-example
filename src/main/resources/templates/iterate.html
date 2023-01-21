@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">>
+<head>
+    <meta charset="UTF-8">
+    <title>Iterate Example</title>
+</head>
+<body>
+    <h1>Going to traverse element</h1>
+
+<!--    ITERATING LIST USING THYMELEAF-->
+
+    <ul>
+        <li th:each="n,status : ${name}">
+            <span th:style="${status.odd} ? 'color:red; font-weight:bold' : 'font-weight:normal'" th:text="${n}"></span>
+        </li>
+    </ul>
+
+
+</body>
+</html>

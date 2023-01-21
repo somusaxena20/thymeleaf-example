@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+</head>
+<body>
+    <h1>About <span th:text="${#strings.toLowerCase(Name)}"></span></h1>
+    <h2>Length of your name : <span th:text="${#strings.length(Name)}"></span></h2>
+    <h2>LeetCode : <a th:href="${LeetCode}" target="_blank">LeetCode</a></h2>
+
+<!--    VARIABLE DECLARATION BY THYMELEAF BUT IT's SCOPE IS ONLY FOR DIV-->
+
+    <div th:with="a=5, b=65, n=${Name}">
+        <h3>Value of variable a = <span th:text="${a}"></span></h3>
+        <h3>Value of variable b = <span th:text="${b}"></span></h3>
+        <h3>Value of variable n = <span th:text="${n}"></span></h3>
+
+        <h4>Adding a and b : <span th:text="${a+b}+' '+${s}"></span></h4>
+    </div>
+
+<!--    OUT OF SCOPE NOTHING PRINT-->
+    <h3>Value of variable n = <span th:text="${n}"></span></h3>
+
+
+    <footer th:replace="footer::footer1(name, branch, location)">
+
+    </footer>
+</body>
+</html>
